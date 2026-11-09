@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>	<!-- root tag -->
+
+	<head>	<!-- html child node -->
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	
+	<body>	<!-- html child node -->
+	
+		<!-- body child node -->
+		
+		<h3 id="intro">제목입니다</h3>
+		
+		<p id="demo">단락입니다</p>
+		
+		<button type="button" onclick="func()">버튼</button>
+		
+		<script type="text/javascript">
+		function func() {
+			// let intro = document.getElementById('intro').innerHTML;
+			let intro = document.getElementById('intro').childNodes[0].nodeValue;
+			alert(intro);
+		}		
+		</script>
+		
+		<br/><br/>
+		
+		<select id="car">
+			<option>benz</option>
+			<option>bmw</option>
+			<option>volvo</option>		
+		</select>
+		
+		<button type="button" onclick="car()">선택</button>
+		
+		<script type="text/javascript">
+		function car() {
+			let mycar = document.getElementById("car").childNodes;	
+			//alert(mycar.length);
+			alert(mycar[5].text);
+		}		
+		</script>
+		
+		<br/><br/>
+		
+		<!-- 태그추가: createElement -->
+		<!-- appendChild -->
+		<div id="div1">
+			<p id="p1">Hello</p>
+			<p id="p2">World</p>
+		</div>
+		
+		<button type="button" onclick="append()">추가</button>
+		
+		<script type="text/javascript">
+		function append() {
+			let p_tag = document.createElement("p");
+			// p_tag.innerHTML = "welcome";
+			let textNode = document.createTextNode("welcome");
+			p_tag.appendChild(textNode);
+			
+			let div1 = document.getElementById("div1");
+			div1.appendChild(p_tag);
+			
+			document.getElementsByTagName
+		}		
+		</script>
+	
+	</body>
+	
+</html>
+
+
